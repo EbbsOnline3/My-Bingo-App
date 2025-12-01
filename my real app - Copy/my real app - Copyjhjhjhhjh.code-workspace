@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "my real app - Copy",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502,
+		"liveServer.settings.multiRootWorkspaceName": "my real app - Copy"
+	}
+}

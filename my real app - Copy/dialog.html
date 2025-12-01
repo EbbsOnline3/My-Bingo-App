@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dialog</title>
+</head>
+<body>
+    <button type="button">Show Scoreboard</button>
+    <dialog class="score-board-dialog" id="score-board-dialog">
+        <h2 class="score-board-header">Score Board</h2>
+        <div class="score-board-contents">
+            <table class="score-board-table">
+                <thead>
+                    <tr>
+                        <th class="player-name">Player</th>
+                        <th class="player-score">Score</th>
+                    </tr>
+                </thead>
+                <tbody class="score-board-tbody">
+                    <!-- Score rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+        <button type="button" id="close-scoreboard-button">Close</button>
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById('score-board-dialog');
+        const showDialogButton = document.querySelector('button');
+        const closeDialogButton = document.getElementById('close-scoreboard-button');
+        closeDialogButton.addEventListener('click', () => {
+            dialog.close();
+        });
+
+        showDialogButton.addEventListener('click', () => {
+            dialog.showModal();
+        });
+    </script>
+</body>
+</html>
